@@ -1,0 +1,45 @@
+h1{
+  margin-top: 4%;
+  text-align: center;
+}
+
+#download {
+  margin-top: 1%;
+  animation: fadeInAnimation ease 0.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#downloadb {
+  border-radius: 5px;
+  display: block;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  margin: 3% auto;
+  background-color: #e9bb54;
+  color: white;
+  font-weight: bold;
+  border: 2px solid;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 17px;
+  letter-spacing: 1px;
+  -webkit-transition: ease-out 0.3s;
+  -moz-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+
+#Downloadb:hover {
+  background-color: white;
+  color: #efa666;
+  border: 3px solid #efa666;
+  font-weight: bold;
+}

@@ -1,0 +1,66 @@
+html {
+  height: 100%;
+}
+
+body {
+  /* background-image: url("test1.png"); */
+  background-color: #f0ede9;
+  /* #B5D5C5; */
+  background-position: right top;
+  /* backdrop-filter: blur(20px); */
+  background-repeat: none;
+  background-size: contain;
+  margin: 0;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* .navbar{
+  background-color: #B5D5C5;
+  border-bottom: 3px solid;
+  border-radius: 5px;
+  border-color: #e9bb54;
+} */
+.container-fluid {
+  padding: 0px;
+}
+.navbar-brand {
+  font-weight: bold;
+  padding: 0 4%;
+  background: -webkit-linear-gradient(50deg, #39917f, #0f3e32);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3em;
+}
+.navbar-brand:hover {
+  background: linear-gradient(45deg, #eb455f, #1c6758);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-link {
+  font-weight: bold;
+  color: #3d5656;
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 1.55rem;
+}
+.nav-link:hover {
+  color: #00005c;
+}
+button.navbar-toggler.collapsed,
+button.navbar-toggler {
+  margin-right: 4%;
+  border-color: white;
+  border-width: 1px;
+}
+
+ul {
+  text-align: right;
+  color: green;
+  padding: 0 3.9%;
+}
+
+li {
+  padding-left: 60px;
+}

@@ -1,0 +1,17 @@
+<title>PhytoChemDB |Search</title>
+<%- include("partials/header"); -%>
+<link rel="stylesheet" href="searchstyle.css">
+
+
+<section id="search">
+
+  <h2>Search your information with us!</h2>
+    <form action="/result" class="srch" method="post">
+      <div class="input-group ">
+         <div class="input-group-text" id="btnGroupAddon">Input ID</div>
+         <input type="text" class="form-control" name="IDname" placeholder="enter the name here" style>
+         <button type="submit" name="button">Submit</button>
+       </div>
+    </form>
+</section>
+<%- include("partials/footer"); -%>
