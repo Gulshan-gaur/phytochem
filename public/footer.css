@@ -1,0 +1,18 @@
+<style>
+  #footer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .box-cont {
+    text-align: center;
+  }
+  
+  .box-cont h2 {
+    text-align: center;
+  }
+  
+  .box-cont p {
+    text-align: center;
+  }
+</style>
