@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require('mongoose');
 const homeroutes = require("./routes/homeroute");
@@ -16,6 +17,7 @@ app.use(downloadroutes);
 
 // -----mongodb-----
 mongoose.set('strictQuery', false);
+// mongoose.connect(process.env.MONGODBCONNECT)
 mongoose.connect("mongodb://localhost:27017/Imported")
   .then(()=> console.log("MongoDB connected"))
   .catch(function(err){

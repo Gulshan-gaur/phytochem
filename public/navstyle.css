@@ -17,12 +17,6 @@ body {
   min-height: 100%;
 }
 
-/* .navbar{
-  background-color: #B5D5C5;
-  border-bottom: 3px solid;
-  border-radius: 5px;
-  border-color: #e9bb54;
-} */
 .container-fluid {
   padding: 0px;
 }
@@ -50,7 +44,7 @@ body {
 }
 button.navbar-toggler.collapsed,
 button.navbar-toggler {
-  margin-right: 4%;
+  margin-right: 10%;
   border-color: white;
   border-width: 1px;
 }
@@ -63,4 +57,30 @@ ul {
 
 li {
   padding-left: 60px;
+}
+
+@media screen and (max-width:1024px){
+  .navbar-brand{
+    font-size: 5rem;
+  }
+  button.navbar-toggler.collapsed,
+  button.navbar-toggler {
+    margin-right: 9%;
+    border-color: white;
+    border-width: 2px;
+    padding: 20px 40px;
+  }
+
+  .nav-link{
+    margin-right: 9%;
+  }
+
+  .navbar-nav{
+    text-align: center;
+    background-color: #C7E9B0;
+    padding: 2%;
+  }
+  .nav-link{
+      border-bottom: 3px solid black;
+  }
 }
