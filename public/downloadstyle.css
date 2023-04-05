@@ -37,9 +37,46 @@ h1{
   transition: ease-out 0.3s;
 }
 
+hr{
+  width: 90%;
+}
 #Downloadb:hover {
   background-color: white;
   color: #efa666;
   border: 3px solid #efa666;
   font-weight: bold;
+}
+
+#main_para{
+  margin: 3% 5%;
+  text-align: justify;
+
+}
+
+@media screen and (max-width:1024px){
+
+  #downloadb {
+    border-radius: 5px;
+    display: block;
+    height: 80px;
+    width: 190px;
+    text-align: center;
+    margin: 3% auto;
+    background-color: #e9bb54;
+    color: white;
+    font-weight: bold;
+    border: 2px solid;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 30px;
+    letter-spacing: 1px;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
+  }
+  #main_para{
+    margin: 3% 6%;
+    text-align: justify;
+    font-size: 1.7rem;
+
+  }
 }

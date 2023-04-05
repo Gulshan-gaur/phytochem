@@ -1,1 +1,0 @@
-mongodb+srv://greenDock:<password>@greendock0.hl23w6d.mongodb.net/?retryWrites=true&w=majority

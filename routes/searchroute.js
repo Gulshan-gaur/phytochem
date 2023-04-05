@@ -9,6 +9,14 @@ searchroute.use(bodyParser.json());
 
 searchroute.get("/search",searchcontrol.get_search);    // req search page -AND- data for search
 
-searchroute.post("/result",searchcontrol.result);       // res search for data and give output
+searchroute.post("/idresult",searchcontrol.idResult);       // res search for data and give output
+
+// searchroute.post("/keywrdresult",searchcontrol.keywordResult);
+//
+// searchroute.post("/structureresult",searchcontrol.structureResult);       // res search for data and give output
+//
+// searchroute.post("/molres:page",searchcontrol.molgreater);
+
+
 
 module.exports = searchroute;

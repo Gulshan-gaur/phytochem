@@ -5,12 +5,38 @@
 
 <section id="search">
 
-  <h2>Search your information with us!</h2>
-    <form action="/result" class="srch" method="post">
+  <h2 class="sr">Search your information with us!</h2>
+    <form action="/idresult" class="srch" method="post">
       <div class="input-group ">
-         <div class="input-group-text" id="btnGroupAddon">Input ID</div>
-         <input type="text" class="form-control" name="IDname" placeholder="enter the name here" style>
+         <div class="input-group-text" id="btnGroupAddon">Smiles</div>
+         <input type="text" class="form-control" name="smile" placeholder="enter the name here eg: O[C@H]1C[C@@H](OC(=O)C)[C@]23[" style>
          <button type="submit" name="button">Submit</button>
        </div>
     </form>
+
+         <!-- <form action="/keywrdresult" class="srch" method="post">
+           <div class="input-group ">
+              <div class="input-group-text" id="btnGroupAddon">Molecular Formula</div>
+              <input type="text" class="form-control" name="KEYWORD" placeholder="eg: C7H12O4" style>
+              <button type="submit" name="button">Submit</button>
+            </div>
+         </form>
+
+              <form action="/structureresult" class="srch" method="post">
+                <div class="input-group ">
+                   <div class="input-group-text" id="btnGroupAddon">Structure</div>
+                   <input type="text" class="form-control" name="Structure" placeholder="eg: O=C(O)CCCCCC(=O)O" style>
+                   <button type="submit" name="button">Submit</button>
+                 </div>
+               </form> -->
 </section>
+
+<!-- <section id="filter">
+  <form action="/molres" class="srch" method="post">
+    <input type="text" class="form-control" name="MOLWIG">
+    <button type="submit" name="button">Submit</button>
+  </form>
+</section> -->
+
+
+<%- include("partials/footer"); -%>

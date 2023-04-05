@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require('mongoose');
 const homeroutes = require("./routes/homeroute");
@@ -16,7 +17,8 @@ app.use(downloadroutes);
 
 // -----mongodb-----
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb://localhost:27017/Imported")
+// mongoose.connect(process.env.MONGODBCONNECT)
+mongoose.connect("mongodb+srv://greenDock:lab48greenDock@greendock0.hl23w6d.mongodb.net/sam1?retryWrites=true&w=majority")
   .then(()=> console.log("MongoDB connected"))
   .catch(function(err){
     logger.log("error","connection failed : " + err)

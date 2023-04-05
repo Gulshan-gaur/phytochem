@@ -1,0 +1,150 @@
+<tr>
+     <td>ID</td>
+     <td> <%= item.id%> </td>
+  </tr>
+  <tr>
+       <td>Smile</td>
+       <td><%= item.Smiles %> </td>
+    </tr>
+    <tr>
+         <td>Heavy_Atoms</td>
+         <td><%= item.Heavy_Atoms %> </td>
+      </tr>
+      <tr>
+        <td>Molecule_Name</td>
+        <td><%=item.Molecule_Name %></td>
+      </tr>
+      <tr>
+        <td>Molecular_Formula</td>
+        <td><%=item.Molecular_Formula %></td>
+      </tr>
+      <tr>
+        <td>Molecular_Weight</td>
+        <td><%=item.Molecular_Weight %></td>
+      </tr>
+      <tr>
+        <td>Heavy_Atoms</td>
+        <td><%=item.Heavy_Atoms %></td>
+      </tr>
+      <tr>
+        <td>Arom_Heavy_Atoms</td>
+        <td><%=item.Arom_Heavy_Atoms %></td>
+      </tr>
+      <tr>
+        <td>Fraction_Csp3</td>
+        <td><%=item.Fraction_Csp3 %></td>
+      </tr>
+      <tr>
+        <td>Rotatable_bonds</td>
+        <td><%=item.Rotatable_bonds %></td>
+      </tr>
+      <tr>
+        <td>H_Bond_Acceptors</td>
+        <td><%=item.H_Bond_Acceptors %></td>
+      </tr>
+      <tr>
+        <td>H_Bond_Donors</td>
+        <td><%=item.H_Bond_Donors %></td>
+      </tr>
+      <tr>
+        <td>Molar_Refractivity</td>
+        <td><%=item.Molar_Refractivity %></td>
+      </tr>
+      <tr>
+        <td>TPSA</td>
+        <td><%=item.TPSA %></td>
+      </tr>
+      <tr>
+        <td>GI_absorption</td>
+        <td><%=item.GI_absorption %></td>
+      </tr>
+      <tr>
+        <td>BBB_permeant</td>
+        <td><%=item.BBB_permeant %></td>
+      </tr>
+      <tr>
+        <td>P_gp_substrate</td>
+        <td><%=item.P_gp_substrate %></td>
+      </tr>
+      <tr>
+        <td>CYP1A2_inhibitor</td>
+        <td><%=item.CYP1A2_inhibitor %></td>
+      </tr>
+      <tr>
+        <td>CYP2C19_inhibitor</td>
+        <td><%=item.CYP2C19_inhibitor %></td>
+      </tr>
+      <tr>
+        <td>CYP2C9_inhibitor</td>
+        <td><%=item.CYP2C9_inhibitor %></td>
+      </tr>
+      <tr>
+        <td>CYP2D6_inhibitor</td>
+        <td><%=item.CYP2D6_inhibitor %></td>
+      </tr>
+      <tr>
+        <td>CYP3A4_inhibitor</td>
+        <td><%=item.CYP3A4_inhibitor %></td>
+      </tr>
+      <tr>
+        <td>LogKp</td>
+        <td><%=item.LogKp %></td>
+      </tr>
+      <tr>
+        <td>Lipinski</td>
+        <td><%=item.Lipinski %></td>
+      </tr>
+      <tr>
+        <td>Ghose</td>
+        <td><%=item.Ghose %></td>
+      </tr>
+      <tr>
+        <td>Veber</td>
+        <td><%=item.Veber %></td>
+      </tr>
+      <tr>
+        <td>Egan</td>
+        <td><%=item.Egan %></td>
+      </tr>
+      <tr>
+        <td>Muegge</td>
+        <td><%=item.Muegge %></td>
+      </tr>
+      <tr>
+        <td>Bioavailability_Score</td>
+        <td><%=item.Bioavailability_Score %></td>
+      </tr>
+      <tr>
+        <td>PAINS</td>
+        <td><%=item.PAINS %></td>
+      </tr>
+      <tr>
+        <td>Brenk</td>
+        <td><%=item.Brenk %></td>
+      </tr>
+      <tr>
+        <td>Leadlikeness</td>
+        <td><%=item.Leadlikeness %></td>
+      </tr>
+      <tr>
+        <td>Synthetic_accessibility</td>
+        <td><%=item.Synthetic_accessibility %></td>
+      </tr>
+      <tr>
+        <td>created_at</td>
+        <td><%=item.created_at %></td>
+      </tr>
+      <tr>
+        <td>updated_at</td>
+        <td><%=item.updated_at %></td>
+      </tr>
+      <tr>
+        <td>ID</td>
+        <td><%=item.ID %></td>
+      </tr>
+      <tr>
+        <td>SMILES</td>
+        <td><%=item.SMILES %></td>
+      </tr>
+   <%  }); %>
+</tbody>
