@@ -8,8 +8,13 @@ const get_index = function(req,res){
     logger.log("info", "home page");
 };
 
+const aboutUs = function(req,res){
+  res.render("about-us");
+}
+
 // ------------------------ exports  -----------------------------
 
 module.exports = {
     get_index,
+    aboutUs
 };
