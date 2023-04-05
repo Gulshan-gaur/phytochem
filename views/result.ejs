@@ -1,61 +1,96 @@
 <title>PhytoChemDB |result</title>
 <%- include("partials/header"); -%>
-<link rel="stylesheet" href="searchstyle.css">
+  <link rel="stylesheet" href="searchstyle.css">
 
+  <!--
 <section id="search">
 <h2 class="rs">Search your information with us!</h2>
   <form action="/result" class="srchfrm" method="post">
     <div class="input-group ">
-       <div class="input-group-text" id="btnGroupAddon">Input ID</div>
-       <input type="text" class="form-control" name="IDname" placeholder="enter the name here" style>
+       <div class="input-group-text" id="btnGroupAddon">Smile</div>
+       <input type="text" class="form-control" name="smile" placeholder="enter the name here" style>
        <button type="submit" name="button">Submit</button>
      </div>
   </form>
 </section>
+-->
+  <section id="search">
+    <div class="srch">
+      <h3> Result</h3>
+      <!-- <pre><%= JSON.stringify(idnn, null, 2) %></pre> -->
+      <table class="table table-striped table-bordered table-hover table-info">
+        <tbody>
+          <% idnn.forEach(function(item){ %>
+            <tr>
+              <!-- <pre><%= JSON.stringify(idnn, null, 2) %></pre> -->
+              <td>Smile</td>
+              <td>
+                <%= item['SMILES'] %>
+              </td>
+            </tr>
+            <tr>
+              <td>IUPAC Name</td>
+              <td><%= item.IUPAC_name %></td>
+            </tr>
+            <tr>
+              <td>PubChem CID</td>
+              <td><%= item.PubChem_CID %></td>
+            </tr>
+            <tr>
+              <td>Molecular Formula</td>
+              <td>
+                <%=item.Molecular_formula %>
+              </td>
+            </tr>
+            <tr>
+              <td>Molecular Name</td>
+              <td>
+                <%=item.Molecular_name %>
+              </td>
+            </tr>
+            <tr>
+              <td>Molecular Weight</td>
+              <td>
+                <%=item.Molecular_weight %>
+              </td>
+            </tr>
+            <tr>
+              <td>GI Absorption</td>
+              <td>
+                <%=item.GI_absorption %>
+              </td>
+            </tr>
+            <tr>
+              <td>BBB Permeant</td>
+              <td>
+                <%=item.BBB_permeant %>
+              </td>
+            </tr>
+            <tr>
+              <td>Lipinski</td>
+              <td>
+                <%=item.Lipinski %>
+              </td>
+            </tr>
+            <tr>
+              <td>Bioavailability Score</td>
+              <td>
+                <%=item.Bioavailability_Score %>
+              </td>
+            </tr>
+            <tr>
+            <tr>
+              <td>Leadlikeness</td>
+              <td>
+                <%=item.Leadlikeness %>
+              </td>
+            </tr>
+            <% }); %>
+      </table>
+      <% if (empty) { %>
+        <p>No results found</p>
+        <% } %>
+    </div>
+  </section>
 
-<section id="search">
-<div class="srch">
-    <h3> Result</h3>
-  <table class="table table-striped table-bordered table-hover table-info">
-   <tbody>
-     <%  idnn.find(function(item){ %>
-       <tr>
-            <td>Smile</td>
-            <td><%= item.Smiles %> </td>
-         </tr>
-         <tr>
-           <td>Molecular_Formula</td>
-           <td><%=item.Molecular_Formula %></td>
-         </tr>
-         <tr>
-           <td>Molecular_Weight</td>
-           <td><%=item.Molecular_Weight %></td>
-         </tr>
-         <tr>
-           <td>GI_absorption</td>
-           <td><%=item.GI_absorption %></td>
-         </tr>
-         <tr>
-           <td>BBB_permeant</td>
-           <td><%=item.BBB_permeant %></td>
-         </tr>
-         <tr>
-           <td>Lipinski</td>
-           <td><%=item.Lipinski %></td>
-         </tr>
-         <tr>
-           <td>Bioavailability_Score</td>
-           <td><%=item.Bioavailability_Score %></td>
-         </tr>
-         <tr>
-           <tr>
-             <td>Leadlikeness</td>
-             <td><%=item.Leadlikeness %></td>
-           </tr>
-        <%  }); %>
-  </table>
-  <td><%= empty %> </td>
-  </div>
-</section>
-
-<%- include("partials/footer"); -%>
+  <%- include("partials/footer"); -%>

@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const logger = require("../controllers/logger");
-
+// const mongo = require('mongoose');
 const app = express();
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -15,15 +15,16 @@ const get_search = function(req,res){
 
 
 const idResult = function(req,res){
-      const idname=req.body.IDname;
+      const smile=req.body.smile;
 
-      Phytochemical.find({id:idname},function(err,found,next){
+      Phytochemical.find({SMILES:smile},function(err,found,next){
         if(err){
           logger.log("error occured");
           return next(err);
         }
         if(found.length){
-          res.render("result",{empty:null,idnn: found});
+          // console.log(found)
+          res.render("result",{empty:null,idnn:found});
           logger.log("info", "data retrieved");
         }
         else {
@@ -31,6 +32,7 @@ const idResult = function(req,res){
           logger.log("warn", "no data found");
         }
     });
+    // console.log(Phytochemical.find({SMILES:smile}))
 };
 
 // const keywordResult = function(req,res){
