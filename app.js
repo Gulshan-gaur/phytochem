@@ -17,8 +17,8 @@ app.use(downloadroutes);
 
 // -----mongodb-----
 mongoose.set('strictQuery', false);
-// mongoose.connect(process.env.MONGODBCONNECT)
-mongoose.connect("mongodb+srv://greenDock:lab48greenDock@greendock0.hl23w6d.mongodb.net/sam1?retryWrites=true&w=majority")
+const mongoURI = process.env.MONGO_URI;
+mongoose.connect(mongoURI)
   .then(()=> console.log("MongoDB connected"))
   .catch(function(err){
     logger.log("error","connection failed : " + err)
