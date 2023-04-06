@@ -26,7 +26,7 @@ body {
   background: -webkit-linear-gradient(50deg, #39917f, #0f3e32);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3em;
+  font-size: 4em;
 }
 .navbar-brand:hover {
   background: linear-gradient(45deg, #eb455f, #1c6758);
@@ -37,7 +37,7 @@ body {
   font-weight: bold;
   color: #3d5656;
   font-family: "Mochiy Pop P One", sans-serif;
-  font-size: 1.55rem;
+  font-size: 1.75rem;
 }
 .nav-link:hover {
   color: #00005c;
@@ -56,7 +56,7 @@ ul {
 }
 
 li {
-  padding-left: 60px;
+  padding-left: 25px;
 }
 
 @media screen and (max-width:1024px){

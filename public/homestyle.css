@@ -3,7 +3,7 @@ h4 {
   color: black;
   padding-top: 80px;
   padding-left: 70px;
-  font-size: 3rem;
+  font-size: 3.3rem;
   font-weight: 400;
 }
 
@@ -18,7 +18,7 @@ h4 {
   margin-left: 7%;
   display: flex;
   color: black;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: left;
   justify-content: center;
   animation: fadeInAnimation ease 0.8s;
