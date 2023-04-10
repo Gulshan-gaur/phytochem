@@ -17,17 +17,8 @@ const dbSchema = new schema({
   Lipinski: Number,
   Bioavailability_Score: String,
   Leadlikeness: String,
-   });   
+   });
    
-   
-   
-   
-   
-   
-   
-   
-
-
 const Phytochemical= mongoose.model("phytochems",dbSchema);
 // const fruit= new Fruit ({name:"apple", rating: 9,review: "noice"});
 // fruit.save();

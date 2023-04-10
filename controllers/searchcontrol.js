@@ -15,7 +15,7 @@ const get_search = function(req,res){
 
 
 const idResult = function(req,res){
-      const smile=req.body.smile;
+      const smile=req.query.smile;
 
       Phytochemical.find({SMILES:smile},function(err,found,next){
         if(err){
@@ -73,40 +73,31 @@ const idResult = function(req,res){
 // };
 //
 //
-// const molgreater =  async function (req,res){
-//   try{
-//   const {page =1, limit = 10}=req.query;
-//   const molwig = req.body.MOLWIG;
-//
-//   const count = await Phytochemical.find({Molecular_Weight: { $gt: molwig}}).countDocuments();
-//   const data = await Phytochemical.find({Molecular_Weight: { $gt: molwig}},function(err,found,next){
-//
-//     console.log(count);
-//     if(found.length){
-//       res.render("resultgt",{empty:null,molwg: found, totalPages: Math.ceil(count/limit),currentpage: page});
-//       logger.log("info", "data retrieved");
-//     }
-//     else {
-//       res.render("resultgt",{empty : "No data Found", molwg:[]});
-//       logger.log("warn", "no data found");
-//     }
-// }).limit(limit*1).skip((page-1)*limit).exec();
-//
-//
-// }
-//
-// catch(err){
-//   if(err){
-//     logger.log("error occured");
-//     return next(err);
-//   }
-// }
-// };
+const molgreater =  async function (req,res){
+  try{
+    const molwig = req.query.mol_wig;
+    const less = req.query.lessthan;
+  var {page =1, limit = 10}=req.query;
+  const data = await Phytochemical.find({Molecular_weight: { $gt: molwig, $lt: less}}).limit(limit*1).skip((page-1)*limit).exec();
+  var count = await Phytochemical.find({Molecular_weight: { $gt: molwig, $lt: less}}).countDocuments();
+  if(count >=200){
+  count = 200;
+  }
+      res.render("resultgt",{empty:null, molwg: data, totalPages: Math.ceil(count/limit),page: page,wg:molwig,less:less});
+}
+
+catch(err){
+  if(err){
+    console.log("error occured");
+    console.log(err);
+  }
+}
+};
 
 module.exports = {
     get_search,
     idResult,
     // structureResult,
     // keywordResult,
-    // molgreater
+    molgreater
 };

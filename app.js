@@ -18,6 +18,7 @@ app.use(downloadroutes);
 // -----mongodb-----
 mongoose.set('strictQuery', false);
 const mongoURI = process.env.MONGO_URI;
+  // const mongoURI = "mongodb://localhost:27017/Imported";
 mongoose.connect(mongoURI)
   .then(()=> console.log("MongoDB connected"))
   .catch(function(err){
