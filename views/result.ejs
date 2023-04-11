@@ -1,24 +1,25 @@
 <title>PhytoChemDB |result</title>
+<link rel="stylesheet" href="resultstyle.css">
 <%- include("partials/header"); -%>
-  <link rel="stylesheet" href="searchstyle.css">
 
-  <!--
-<section id="search">
-<h2 class="rs">Search your information with us!</h2>
-  <form action="/result" class="srchfrm" method="post">
-    <div class="input-group ">
-       <div class="input-group-text" id="btnGroupAddon">Smile</div>
-       <input type="text" class="form-control" name="smile" placeholder="enter the name here" style>
-       <button type="submit" name="button">Submit</button>
-     </div>
-  </form>
-</section>
--->
-  <section id="search">
-    <div class="srch">
-      <h3> Result</h3>
+
+<!-- <section id="search">
+  <div class="mainsearch">
+    <h4 class="sr">Structure search</h4>
+      <form action="/idresult" method="get">
+        <div >
+           <input type="search" class="form-control" name="smile" placeholder="enter the name here eg: O[C@H]1C[C@@H](OC(=O)C)[C@]23["> <br>
+           <button class="big-button" type="submit">SEARCH</button>
+         </div>
+      </form>
+    </div>
+</section> -->
+
+  <section id="res">
+    <div class="resu">
+      <h1> RESULT</h1>
       <!-- <pre><%= JSON.stringify(idnn, null, 2) %></pre> -->
-      <table class="table table-striped table-bordered table-hover table-info">
+      <table class="table table-striped table-bordered table-hover">
         <tbody>
           <% idnn.forEach(function(item){ %>
             <tr>

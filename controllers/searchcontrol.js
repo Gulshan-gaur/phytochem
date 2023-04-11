@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const logger = require("../controllers/logger");
-// const mongo = require('mongoose');
 const app = express();
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -9,7 +8,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 const Phytochemical = require("../models/model");
 
 const get_search = function(req,res){
-  res.render("search",{empty : null, idnn:[]});
+  res.render("search");
     logger.log("info", "search page");
 };
 
@@ -23,7 +22,6 @@ const idResult = function(req,res){
           return next(err);
         }
         if(found.length){
-          // console.log(found)
           res.render("result",{empty:null,idnn:found});
           logger.log("info", "data retrieved");
         }
@@ -77,13 +75,36 @@ const molgreater =  async function (req,res){
   try{
     const molwig = req.query.mol_wig;
     const less = req.query.lessthan;
+    const h_don = req.query.h_donor;
+    const h_acc = req.query.h_acceptor;
+    const ring =req.query.aro_ring
   var {page =1, limit = 10}=req.query;
-  const data = await Phytochemical.find({Molecular_weight: { $gt: molwig, $lt: less}}).limit(limit*1).skip((page-1)*limit).exec();
-  var count = await Phytochemical.find({Molecular_weight: { $gt: molwig, $lt: less}}).countDocuments();
+  const data = await Phytochemical.find({
+    Molecular_weight: { $gt: molwig, $lt: less},
+    Aromatic_rings: ring,
+    H_bond_donors: h_don,
+    H_bond_acceptors: h_acc
+  }).limit(limit*1).skip((page-1)*limit).exec();
+  var count = await Phytochemical.find({
+    Molecular_weight: { $gt: molwig, $lt: less},Aromatic_rings: ring,H_bond_donors: h_don,H_bond_acceptors: h_acc
+  }).countDocuments();
   if(count >=200){
+
   count = 200;
   }
-      res.render("resultgt",{empty:null, molwg: data, totalPages: Math.ceil(count/limit),page: page,wg:molwig,less:less});
+  if(data.length){
+
+      res.render("resultgt",{
+        empty:null, molwg: data, totalPages: Math.ceil(count/limit),page: page,
+        wg:molwig,less:less,h_donor:h_don,h_acceptor:h_acc,aro_ring:ring});
+      logger.log("info","data retrieved");
+      }
+      else {
+        res.render("resultgt",{
+          empty : "No data Found", molwg:[],totalPages: Math.ceil(count/limit),page: page,
+          wg:molwig,less:less,h_donor:h_don,h_acceptor:h_acc,aro_ring:ring});
+        logger.log("warn", "no data found");
+      }
 }
 
 catch(err){
@@ -94,10 +115,11 @@ catch(err){
 }
 };
 
+
 module.exports = {
     get_search,
     idResult,
     // structureResult,
     // keywordResult,
-    molgreater
+    molgreater,
 };

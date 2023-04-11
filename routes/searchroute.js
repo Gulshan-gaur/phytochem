@@ -12,11 +12,10 @@ searchroute.get("/search",searchcontrol.get_search);    // req search page -AND-
 searchroute.get("/idresult",searchcontrol.idResult);       // res search for data and give output
 
 // searchroute.post("/keywrdresult",searchcontrol.keywordResult);
-//
-// searchroute.post("/structureresult",searchcontrol.structureResult);       // res search for data and give output
-//
-searchroute.get("/molres",searchcontrol.molgreater);
 
+// searchroute.post("/structureresult",searchcontrol.structureResult);       // res search for data and give output
+
+searchroute.get("/para_search",searchcontrol.molgreater);
 
 
 module.exports = searchroute;

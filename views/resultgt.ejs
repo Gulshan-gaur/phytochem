@@ -1,27 +1,29 @@
 <title>PhytoChemDB |result</title>
+<link rel="stylesheet" href="resultstyle.css">
 <%- include("partials/header"); -%>
-<link rel="stylesheet" href="searchstyle.css">
 
-<section id="search">
-<div class="srch">
-    <h3> Result</h3>
-          <!-- <pre><%= JSON.stringify(molwg, null, 2) %></pre> -->
-  <table class="table table-striped table-bordered table-hover table-info">
+<section id="res">
+<div class="resu">
+    <h1> Result</h1>
+  <table class="table table-striped table-bordered table-hover">
    <tbody>
    <% molwg.find(function(item){ %>
      <tr>
-             <!-- <pre><%= JSON.stringify(molwg, null, 2) %></pre> -->
        <td>Molecular_Formula</td>
        <td><%=item.Molecular_formula %></td>
      </tr>
 <%  }); %>
 </table>
-
-  <% for(let i=1;i<=totalPages ;i++) { %>
-      <a href="?mol_wig=<%= wg %>&lessthan=<%=less%>&page=<%= i %>"><%= i %></a>
-<%  } %>
 <% if (empty) { %>
   <p>No results found</p>
   <% } %>
 </div>
 </section>
+
+<div class="ref">
+  <% for(let i=1;i<=totalPages ;i++) { %>
+      <a href="?mol_wig=<%= wg %>&lessthan=<%= less %>&h_donor=<%= h_donor %>&h_acceptor=<%= h_acceptor %>&aro_ring=<%= aro_ring %>&page=<%= i %>"><%= i %></a>
+<%  } %> <a href="/download">.....Download database. </a>
+</div>
+
+  <%- include("partials/footer"); -%>

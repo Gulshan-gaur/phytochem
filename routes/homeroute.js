@@ -10,7 +10,7 @@ homeroute.use(bodyParser.json());
 
 homeroute.get("/",homecontrol.get_index);    // req index page
 
-homeroute.get("/about-us", homecontrol.aboutUs)
+homeroute.get("/about-us", homecontrol.aboutUs)  // req home page
 
 
 module.exports = homeroute;

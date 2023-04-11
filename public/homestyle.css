@@ -19,7 +19,7 @@ h4 {
   display: flex;
   color: black;
   font-size: 1.1rem;
-  text-align: left;
+  text-align: justify;
   justify-content: center;
   animation: fadeInAnimation ease 0.8s;
   animation-iteration-count: 1;
@@ -39,7 +39,6 @@ img {
   margin-bottom: -76px;
   height: auto;
   width: 650px;
-  /* background-size: contain; */
 }
 hr {
   position: relative;

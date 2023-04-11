@@ -4,15 +4,15 @@
 
 
 <section id="search">
-
-  <h2 class="sr">Search your information with us!</h2>
-    <form action="/idresult" class="srch" method="get">
-      <div class="input-group ">
-         <div class="input-group-text" id="btnGroupAddon">Input ID</div>
-         <input type="text" class="form-control" name="smile" placeholder="enter the name here eg: Phyto_26" style>
-         <button type="submit" name="button">Submit</button>
-       </div>
-    </form>
+  <div class="mainsearch">
+    <h4 class="sr">Structure search</h4>
+      <form action="/idresult" method="get">
+        <div >
+           <input type="search" class="form-control" name="smile" placeholder="enter the name here eg: O[C@H]1C[C@@H](OC(=O)C)[C@]23["> <br>
+           <button class="big-button" type="submit">SEARCH</button>
+         </div>
+      </form>
+    </div>
 
          <!-- <form action="/keywrdresult" class="srch" method="post">
            <div class="input-group ">
@@ -29,13 +29,23 @@
                    <button type="submit" name="button">Submit</button>
                  </div>
                </form> -->
-</section>
+             </section>
 
-<section id="filter">
-  <form action="/molres" class="srch" method="get">
-    <input type="text" class="form-control" name="mol_wig">
-    <input type="text" name="lessthan" value="">
-    <button type="submit" name="button">Submit</button>
+<section id="para">
+  <h4>Physiochemical Properties</h4>
+  <hr>
+  <form action="/para_search" class="" method="get">
+    <label for="mol_wig" class="lbl">select the range of Molecular Weight to search from : </label>
+    <input type="text" class="inp_para"  name="mol_wig">
+    <label for="">to</label>
+    <input type="text" class="inp_para" name="lessthan" value=""> <br>
+    <label for="h_donor" class="lbl">Select desired number of Hydrogen Bond Donors :</label>
+    <input type="text" class="inp_para" name="h_donor" value=""> <br>
+    <label for="h_acceptor" class="lbl">Select desired number of Hydrogen Bond Acceptors :</label>
+    <input type="text" class="inp_para" name="h_acceptor" value=""> <br>
+    <label for="aro_ring" class="lbl">Select desired number Aromatic Rings :</label>
+    <input type="text" class="inp_para" name="aro_ring" value=""> <br>
+    <button type="submit" class="para-but" name="button">Submit</button>
   </form>
 </section>
 
