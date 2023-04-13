@@ -5,10 +5,12 @@
 
 <section id="search">
   <div class="mainsearch">
-    <h4 class="sr">Structure search</h4>
+    <h4 class="sr">Search Query</h4>
       <form action="/idresult" method="get">
         <div >
-           <input type="search" class="form-control" name="smile" placeholder="enter the name here eg: O[C@H]1C[C@@H](OC(=O)C)[C@]23["> <br>
+           <input type="search" class="form-control" name="smile"  placeholder="Search by Smile eg: CN1C=C(CC=C1)C(=O)O "> <br>
+           <input type="search" class="form-control" name="pubchem_cid" placeholder="Search by PubChem CID"> <br>
+           <input type="search" class="form-control" name="mol_formula" placeholder="Search by Molecular Formula"> <br>
            <button class="big-button" type="submit">SEARCH</button>
          </div>
       </form>
