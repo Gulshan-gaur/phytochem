@@ -84,45 +84,6 @@ const idResult = function(req, res) {
     logger.log('warn', 'invalid query type');
   }
 };
-
-// const keywordResult = function(req,res){
-//       const key=req.body.KEYWORD;
-//
-//       Phytochemical.find({Molecular_Formula:key},function(err,found,next){
-//         if(err){
-//           logger.log("error occured");
-//           return next(err);
-//         }
-//         if(found.length){
-//           res.render("result",{empty:null,idnn: found});
-//           logger.log("info", "data retrieved");
-//         }
-//         else {
-//           res.render("result",{empty : "No data Found", idnn:[]});
-//           logger.log("warn", "no data found");
-//         }
-//     });
-// };
-//
-// const structureResult = function(req,res){
-//       const struc=req.body.Structure;
-//       Phytochemical.find({Smiles:struc},function(err,found,next){
-//         if(err){
-//           logger.log("error occured");
-//           return next(err);
-//         }
-//         if(found.length){
-//           res.render("result",{empty:null,idnn: found});
-//           logger.log("info", "data retrieved");
-//         }
-//         else {
-//           res.render("result",{empty : "No data Found", idnn:[]});
-//           logger.log("warn", "no data found");
-//         }
-//     });
-// };
-//
-//
 const molgreater =  async function (req,res){
   try{
     const molwig = req.query.mol_wig;
@@ -131,22 +92,28 @@ const molgreater =  async function (req,res){
     const h_acc = req.query.h_acceptor;
     const ring =req.query.aro_ring
     var {page =1, limit = 10}=req.query;
-    const data = await Phytochemical.find({
-      Molecular_weight: { $gt: parseInt(molwig), $lt: parseInt(less) },
-      Aromatic_rings: parseInt(ring),
-      H_bond_donors: parseInt(h_don),
-      H_bond_acceptors: parseInt(h_acc)
-    }).limit(limit * 1).skip((page - 1) * limit).exec();
-    console.log(data)
-    var count = await Phytochemical.find({
-      Molecular_weight: { $gt: parseInt(molwig), $lt: parseInt(less) },
-      Aromatic_rings: parseInt(ring),
-      H_bond_donors: parseInt(h_don),
-      H_bond_acceptors: parseInt(h_acc)
-    }).countDocuments();
+    const query = {
+      Molecular_weight: { $gt: parseFloat(molwig), $lt: parseFloat(less) },
+    };
+    if (h_don) {
+      query.H_bond_donors = parseInt(h_don);
+    }
+
+    if (h_acc) {
+      query.H_bond_acceptors = parseInt(h_acc);
+    }
+    if (ring){
+      query.Aromatic_rings= parseInt(ring);
+    }
+
+    const data = await Phytochemical.find(query)
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .exec();
+
+    let count = await Phytochemical.countDocuments(query);
     if(count >=200){
-  
-    count = 200;
+      count = 200;
     }
     if(data.length){
         res.render("resultgt",{

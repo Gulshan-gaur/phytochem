@@ -18,7 +18,6 @@ app.use(downloadroutes);
 // -----mongodb-----
 mongoose.set('strictQuery', false);
 const mongoURI = process.env.MONGO_URI;
-  // const mongoURI = "mongodb://localhost:27017/Imported";
 mongoose.connect(mongoURI)
   .then(()=> console.log("MongoDB connected"))
   .catch(function(err){
@@ -26,7 +25,7 @@ mongoose.connect(mongoURI)
 });
 //--------- server port
 app.listen(3000,function(){
-  console.log("server is working");
+  console.log("server is running on Port 3000");
 });
 
 //------------ export --------

@@ -10,9 +10,11 @@ const dbSchema = new schema({
   Molecule_name: String,
   IUPAC_name:String,
   PubChem_CID:Number,
+  Reference:String,
   Molecular_formula: String,
   Molecular_weight: Number,
   TPSA: Number,
+  Logp:Number,
   H_bond_donors: Number,
   H_bond_acceptors: Number,
   Rotatable_bonds :Number,
@@ -23,11 +25,9 @@ const dbSchema = new schema({
   Bioavailability_Score: Number,
   Leadlikeness: String,
    });
-
+   
+   
 const Phytochemical= mongoose.model("phytochems",dbSchema);
-// const fruit= new Fruit ({name:"apple", rating: 9,review: "noice"});
-// fruit.save();
-
 
 //--------------- exports ------------
 

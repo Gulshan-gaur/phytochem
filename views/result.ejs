@@ -2,19 +2,6 @@
 <link rel="stylesheet" href="resultstyle.css">
 <%- include("partials/header"); -%>
 
-
-<!-- <section id="search">
-  <div class="mainsearch">
-    <h4 class="sr">Structure search</h4>
-      <form action="/idresult" method="get">
-        <div >
-           <input type="search" class="form-control" name="smile" placeholder="enter the name here eg: O[C@H]1C[C@@H](OC(=O)C)[C@]23["> <br>
-           <button class="big-button" type="submit">SEARCH</button>
-         </div>
-      </form>
-    </div>
-</section> -->
-
   <section id="res">
     <div class="resu">
       <h1> RESULT</h1>
@@ -23,7 +10,6 @@
         <tbody>
           <% idnn.forEach(function(item){ %>
             <tr>
-              <!-- <pre><%= JSON.stringify(idnn, null, 2) %></pre> -->
               <td>Smile</td>
               <td>
                 <%= item['SMILES'] %>
