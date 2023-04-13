@@ -4,36 +4,63 @@ body{
   transition: ease-out 0.3s;
 }
 #search{
-  margin: 50px 0;
+  margin: 80px 0;
 }
 
 .mainsearch{
-    background-color: #d8f3ba;
+    background-color: #BCE29E ;
     box-shadow: 8px 8px 16px 0 #9ddab6, 0 10px 40px 0 #9ddab6;
     border: 2px solid #4faa44;
-  border-radius: 10px;
-    padding: 20px 40px 40px;
+    border-radius: 20px;
+    padding: 3px 20px 20px;
     width: 60%;
     margin: auto;
 
 }
 
+.card-header-tabs .nav-link.active {
+  color: #41644A;
+  background-color:#d8f3ba;
+  border: 2px solid #4faa44;
+  border-bottom-color: #d8f3ba;
+}
+.card-header{
+  background-color: #BCE29E;
+  padding-left: 22.3%;
+  /* border-bottom-color: #4faa44; */
+/* BCE29E */
+}
+.nav-link.head{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 600;
+  color: #449132;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.card-body{
+  border: 2px solid #4faa44;
+  border-top-color: #d8f3ba;;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  background-color: #d8f3ba;
+}
+.form-control{
+  border-radius: 5px;
+  margin: 20px 20px 10px;
+  width: 96%;
+  height: 27%;
+}
 h4{
   color: #449132;
   text-align: center;
   padding-bottom: 10px;
 }
 
-.form-control{
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
 /* -----------button---------- */
 
 button.big-button{
   cursor: pointer;
-	 margin-left: 42%;
 	 margin-bottom: 10px;
 	 text-shadow: 0 -2px 0 #4a8a65, 0 1px 1px #c2dece;
 	 box-sizing: border-box;
