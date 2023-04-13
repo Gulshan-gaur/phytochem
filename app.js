@@ -25,7 +25,7 @@ mongoose.connect(mongoURI)
 });
 //--------- server port
 app.listen(3000,function(){
-  console.log("server is working");
+  console.log("server is running on Port 3000");
 });
 
 //------------ export --------

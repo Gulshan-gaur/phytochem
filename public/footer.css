@@ -1,10 +1,8 @@
 #footer {
   background: #122119;
-  /* #00425A; */
   overflow: hidden;
   margin-top: auto;
   color: white;
-  /* backdrop-filter : blur(4px); */
   height: 300px;
   display: flex;
   flex-wrap: wrap;
@@ -25,12 +23,14 @@ h7 {
   bottom: 2px;
 }
 p {
-  margin: 0 15%;
+  margin: 1% 1%;
   text-align: justify;
-  color: #eee3cb;
 }
 
 a {
+  color: black;
+}
+a:hover{
   color: #f2d388;
 }
 
