@@ -27,8 +27,6 @@ body{
 .card-header{
   background-color: #BCE29E;
   padding-left: 22.3%;
-  /* border-bottom-color: #4faa44; */
-/* BCE29E */
 }
 .nav-link.head{
   font-family: 'Ubuntu', sans-serif;
@@ -95,20 +93,6 @@ button.big-button:active {
 	 top: 0;
 	 box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7), 0 3px 9px rgba(0, 0, 0, 0.2);
 }
- button.big-button:before {
-	 display: inline-block;
-	 content: "";
-	 position: absolute;
-	 left: 0;
-	 right: 0;
-	 z-index: -1;
-	 top: 6px;
-	 border-radius: 5px;
-	 height: 65px;
-	 background: linear-gradient(to top, #1e5033 0%, #378357 6px);
-	 transition: all 0.078s ease-out;
-	 box-shadow: 0 1px 0 2px rgba(0, 0, 0, 0.3), 0 5px 2.4px rgba(0, 0, 0, 0.5), 0 10.8px 9px rgba(0, 0, 0, 0.2);
-}
 
 /* -------------button---------- */
 
@@ -156,6 +140,21 @@ input.inp_para {
   transform: scale(1.05) rotate(-1deg);
 }
 
+@media screen and (max-width:1580px){
+  .card-header{
+    padding-left: 0;
+    font-size: 0.5rem;
+  }
+}
+@media screen and (max-width:1250px){
+  .nav-link.head{
+    font-size: 20px;
+  }
+
+  .form-control{
+    margin: 20px auto;
+  }
+}
 @media screen and (max-width:1024px){
   h4{
     font-size: 2rem;
@@ -163,10 +162,25 @@ input.inp_para {
   .form-control{
     font-size: 1.5rem;
   }
-  button.big-button{
-    margin-left: 35%;
+  .card-body{
+    border-top: 2px solid #4faa44;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
   }
-
+  .nav-link.head{
+    font-size: 1.7rem;
+  }
+  .nav-link.head.active{
+    border-bottom: 9px solid #4faa44;
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius: 10px;
+  }
+  .card-header-tabs{
+    display: inline;
+  }
+  .nav-link{
+    margin: 0;
+  }
   #para{
     width: 60%;
     font-size: 1.5rem;
