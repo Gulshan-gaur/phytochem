@@ -8,6 +8,6 @@ downloadroute.use(bodyParser.json());
 
 downloadroute.get("/download",downloadcontrol.get_download);     // req download page
 
-downloadroute.post("/download",downloadcontrol.download); // res download csv file button
+// downloadroute.post("/download",downloadcontrol.download); // res download csv file button
 
 module.exports = downloadroute;

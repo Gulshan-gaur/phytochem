@@ -127,7 +127,7 @@ const molgreater =  async function (req,res){
             wg:molwig,less:less,h_donor:h_don,h_acceptor:h_acc,aro_ring:ring});
           logger.log("warn", "no data found");
         }
-  }  
+  }
   catch(err){
   if(err){
     console.log("error occured");
